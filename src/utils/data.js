@@ -12,7 +12,7 @@ export const projectExperience = [
 
 export const WhatDoIHelp = [
   "I can help you find simple but effective solutions, I am dedicated to Front-End so I can help you with the views of your web page whether it is personal or your business.",
-  "abajo podras encontrar lo necesario para contactarme!!"
+  
 ];
 
 export const workExp = [
