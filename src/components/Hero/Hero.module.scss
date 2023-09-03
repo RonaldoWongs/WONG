@@ -68,10 +68,10 @@
             position: absolute;
             bottom: -2rem;
             margin: auto;
-            background-image: url("../splash.png");
+            background-image: url("https://png.pngtree.com/png-clipart/20230323/original/pngtree-holi-colors-splash-powder-png-image_9001436.png");
             background-repeat: no-repeat;
-            background-size: 23rem;
-            left: 33%;
+            background-size: 34rem;
+            left: 30%;
 
             img {
                 @media (max-width: $sm ) {
@@ -87,9 +87,9 @@
                 display: none;
             }
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 0;
-            color: rgb(174, 64, 21);
+            color: rgb(255, 7, 7);
         }
     }
 }

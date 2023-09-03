@@ -18,7 +18,17 @@ const Header = () => {
     setMenuOpened,
   });
 
+  const toggleMenu = () => {
+    setMenuOpened((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpened(false);
+  };
+
   const openWhatsApp = () => {
+    // Cerrar el menú cuando se abre WhatsApp
+    closeMenu();
     window.open("https://wa.me/5215611355341", "_blank");
   };
 
@@ -41,17 +51,16 @@ const Header = () => {
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
-          <li>
+          <li onClick={closeMenu}>
             <a href="#work">Experience</a>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <a href="#portfolio">Portfolio</a>
           </li>
-          <li>
-            <a href="#portfolio">Technologies</a>
+          <li onClick={closeMenu}>
+            <a href="#tecnologies">Technologies</a>
           </li>
-          
-          <li>
+          <li onClick={closeMenu}>
             <a href="https://drive.google.com/drive/folders/14nI49j1n5rkEMRHUXcmRarVvziEgpYwT">Currículum</a>
           </li>
           {/* Agregar el botón de WhatsApp */}
@@ -59,14 +68,10 @@ const Header = () => {
             <p>+52 1 5611355341</p>
             <BiPhoneCall size={"40px"} />
           </li>
-          
         </ul>
 
         {/* Para pantallas medianas y pequeñas */}
-        <div
-          className={css.menuIcon}
-          onClick={() => setMenuOpened((prev) => !prev)}
-        >
+        <div className={css.menuIcon} onClick={toggleMenu}>
           <BiMenuAltRight size={30} />
         </div>
       </div>
