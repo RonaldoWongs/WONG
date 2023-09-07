@@ -52,7 +52,7 @@ const Portfolio = () => {
             <span className="primaryText">My Latest Works</span>
             <p style={{ marginTop: "10px" }}>Perfect solution for digital experience</p>
           </div>
-          <a href="https://wongrm.netlify.app/" className="secondaryText">Explore More Works</a>
+          <a href="https://wong-proyectos.netlify.app/" className="secondaryText">Explore More Works</a>
         </motion.div>
         <div className={`flexCenter ${css.showCase}`}>
           <motion.img id="image1" variants={fadeIn("up", "tween", 0.5, 0.6)} src="./showCase1.png" alt="project" />
