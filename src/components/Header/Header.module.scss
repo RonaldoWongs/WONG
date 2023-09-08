@@ -9,87 +9,132 @@
     top: 0rem;
     transition: all 300ms ease;
 
+    
+  
     .container {
-        position: relative;
-        justify-content: space-between;
-        font-weight: 500;
-
-        .name {
-            img {
-                width: 45px;
-                /* Establece el ancho y alto deseado para tu logo */
-                height: 45px;
-                /* Agrega cualquier otro estilo personalizado que desees para el logo */
-            }
+      position: relative;
+      justify-content: space-between;
+      font-weight: 500;
+  
+      .name {
+        img {
+          width: 45px;
+          height: 45px;
+          box-shadow: 0px 4px 4px rgba(3, 3, 3, 0.35);
+          border-radius: 100%;
+          cursor: pointer;
         }
-
-        .menu {
-
-            @media (max-width: $sm),
-            (max-width: $md) {
-                position: absolute;
-                list-style: disc;
-                gap: 2rem;
-                font-weight: 510;
-                flex-direction: column;
-                right: 0;
-                top: 4.2rem;
-                width: 50%;
-                min-width: 15rem;
-                background: rgb(255,255,254);
-                padding: 2rem;
-                display: flex;
-                border-radius: 10px;
-                transition: all 200ms ease;
-                align-items: flex-start;
-                padding: 3rem;
-                justify-content: flex-start;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-            }
-
-            text-transform: uppercase;
-            font-size: 15px;
-            list-style: none;
-            gap: 1.3rem;
-            cursor: pointer; 
-
-            li {
-                a {
-                    color: inherit;
-                    text-decoration: none;
-                    text-shadow: 0px 4px 4px rgba(3, 3, 3, 0.20);
-                }
-
-                &:hover {
-                    color: $secondary;
-                    transition: all 300ms ease;
-                }
-            }
-
-            .phone {
-                gap: 1.2rem;
-                flex-wrap: wrap;
-
-                svg {
-                    color: $secondary;
-                    background-color: white;
-                    padding: 10px;
-                    border-radius: 999px;
-                    box-shadow: 0px 4px 4px rgba(3, 1, 3, 0.30);
-                }
-            }
+      }
+  
+      .menu {
+        @media (max-width: $sm), (max-width: $md) {
+          position: absolute;
+          list-style: disc;
+          gap: 2rem;
+          font-weight: 510;
+          flex-direction: column;
+          right: 0;
+          top: 4.2rem;
+          width: 50%;
+          min-width: 15rem;
+          background: rgb(255, 255, 254);
+          padding: 2rem;
+          display: flex;
+          border-radius: 10px;
+          transition: all 200ms ease;
+          align-items: flex-start;
+          padding: 3rem;
+          justify-content: flex-start;
+          box-shadow: 0px 4px 4px rgba(3, 1, 3, 0.30);
         }
-
-
-
-        .menuIcon {
-
-            @media (max-width: $sm),
-            (max-width: $md) {
-                display: block;
-            }
-
-            display: none;
+  
+        text-transform: uppercase;
+        font-size: 15px;
+        list-style: none;
+        gap: 1.3rem;
+        cursor: pointer;
+  
+        li {
+          a {
+            color: inherit;
+            text-decoration: none;
+            text-shadow: 0px 4px 4px rgba(3, 3, 3, 0.20);
+          }
+  
+          &:hover {
+            color: $secondary;
+            transition: all 300ms ease;
+          }
         }
+  
+        .phone {
+          gap: 1.2rem;
+          flex-wrap: wrap;
+  
+          svg {
+            color: $secondary;
+            background-color: white;
+            padding: 10px;
+            border-radius: 999px;
+            box-shadow: 0px 4px 4px rgba(3, 1, 3, 0.30);
+          }
+        }
+      }
+  
+      .menuIcon {
+        @media (max-width: $sm), (max-width: $md) {
+          display: block;
+        }
+      
+        display: none;
+      }
+      
+      /* Estilos para el botón de redes sociales */
+      .socialButton {
+        cursor: pointer;
+        margin-left: 14rem; /* Ajusta el margen izquierdo según tus necesidades */
+        display: flex;       
+      }
+      
+      .socialIcon {
+        font-size: 24px;
+        color: $primary; /* Ajusta el color según tus preferencias */
+      }
+      
+      /* Estilos para el menú de redes sociales */
+      .socialMenu {
+        opacity: 0; /* Inicialmente oculto */
+        position: absolute;
+        top: 60px; /* Ajusta la posición vertical según tus necesidades */
+        right: 0; /* Ajusta la posición horizontal según tus necesidades */
+        background-color: #fff; /* Ajusta el color de fondo según tus preferencias */
+        border: 1px solid #ccc; /* Ajusta los bordes según tus preferencias */
+        padding: 30px;
+        border-radius: 10px;
+        z-index: 1;
+        transition: opacity 350ms ease; /* Transición de opacidad */
+        box-shadow: 0px 4px 4px rgba(3, 1, 3, 0.30);
+      
+        li {
+          margin-bottom: 0.5rem; /* Ajusta el espaciado entre íconos de redes sociales */
+          a {
+            text-decoration: none;
+            color: $primary; /* Ajusta el color del texto según tus preferencias */
+            display: block;
+            padding: 5px 0;
+            transition: color 200ms ease;
+      
+            &:hover {
+              color: $secondary; /* Ajusta el color al pasar el cursor sobre las redes sociales */
+            }
+          }
+        }
+      }
+      
+      /* Estilos para mostrar el menú de redes sociales cuando está abierto */
+      .socialMenu.opened {
+        opacity: 1; /* Mostrar el menú con opacidad completa */
+      }
+      
     }
-}
+  }

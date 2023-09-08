@@ -196,3 +196,10 @@ export const getMenuStyles = (menuOpened) => {
     return { right: !menuOpened && "-100%" };
   }
 };
+
+export const menuAnimations = {
+  getMenuStyles,
+  headerVariants,
+  // Agrega otras variables de animación si es necesario
+};
+
