@@ -18,11 +18,11 @@ const Hero = () => {
             <br />
             I'm Ronaldo.
           </motion.span>
-          <motion.span className="secondaryText"variants={fadeIn("left", "tween", 0.4, 1)}>
+          <motion.span className="secondaryText" variants={fadeIn("left", "tween", 0.4, 1)}>
             I design beautiful simple
             <br />
             passionate about programming <br />
-             and love what i do.{" "}
+            and love what i do.{" "}
           </motion.span>
         </div>
 
@@ -47,10 +47,14 @@ const Hero = () => {
           </motion.div>
 
           <motion.div variants={fadeIn("left", "tween", 0.5, 1)} className={css.certificate}>
-            <img src="https://curso.academlo.com/wp-content/uploads/2020/02/logo_academlo.png" alt="" />
+            <a href="https://class-center.academlo.com/certs">
+              <img src="https://curso.academlo.com/wp-content/uploads/2020/02/logo_academlo.png" alt="" />
+            </a>
             <span>CERTIFIED WITH ACADEMLO</span>
             <span>FULL STACK DEVELOPER</span>
           </motion.div>
+
+
         </div>
       </motion.div>
     </section>
