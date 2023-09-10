@@ -47,7 +47,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.div variants={fadeIn("left", "tween", 0.5, 1)} className={css.certificate}>
-            <a href="https://class-center.academlo.com/certs">
+            <a href="https://wong-certificate.netlify.app/">
               <img src="https://curso.academlo.com/wp-content/uploads/2020/02/logo_academlo.png" alt="" />
             </a>
             <span>CERTIFIED WITH ACADEMLO</span>
