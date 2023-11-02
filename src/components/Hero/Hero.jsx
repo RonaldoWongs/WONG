@@ -33,15 +33,15 @@ const Hero = () => {
           <motion.img variants={slideIn("up", "tween", 0.5, 1.3)} src="./person.png" alt="" />
         </motion.div>
 
-        <a className={css.email} href="mailto:deigamerwong@gmail.com">
-          deigamerwong@gmail.com
+        <a className={css.email} href="mailto:wongsdeveloper@gmail.com">
+          wongsdeveloper@gmail.com
         </a>
 
         <div className={css.lowerElements}>
           <motion.div variants={fadeIn("right", "tween", 0.3, 1)} className={css.experience}>
-            <div className="primaryText">5</div>
+            <div className="primaryText">7</div>
             <div className="secondaryText">
-              <div>Mounth</div>
+              <div>Months</div>
               <div>Experience</div>
             </div>
           </motion.div>

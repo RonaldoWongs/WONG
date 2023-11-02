@@ -86,9 +86,12 @@ const Header = () => {
           <li onClick={closeMenu}>
             <a href="https://drive.google.com/drive/folders/14nI49j1n5rkEMRHUXcmRarVvziEgpYwT">Currículum</a>
           </li>
+          <li onClick={closeMenu}>
+            <a href="https://wongrm.netlify.app/">Contact</a>
+          </li>
           {/* Agregar el botón de WhatsApp */}
           <li className={`flexCenter ${css.phone}`} onClick={openWhatsApp}>
-            <p>+52 1 5611355341</p>
+            
             <BiPhoneCall size={"40px"} />
           </li>
         </ul>
