@@ -3,7 +3,10 @@
 .wrapper{
     background: white;
     
-    
+    &.dark {
+        background-color: black; /* Establece el fondo en negro para el modo oscuro */
+        color: white; /* Cambia el color del texto a blanco en modo oscuro */
+      }
     
 
     

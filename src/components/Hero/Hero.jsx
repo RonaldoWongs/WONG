@@ -2,15 +2,19 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
-const Hero = () => {
+
+const Hero = ({ darkMode }) => {
+  const containerClasses = `${css.container} ${darkMode ? css.dark : ""}`;
+  const wrapperClasses = `paddings ${css.wrapper} ${darkMode ? css.dark : ""}`;
+
   return (
-    <section className={`paddings ${css.wrapper}`}>
+    <section className={wrapperClasses}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`innerWidth ${css.container}`}
+        className={`innerWidth ${containerClasses}`}
       >
         <div className={css.upperElements}>
           <motion.span className="primaryText" variants={fadeIn("right", "tween", 0.2, 1)}>
@@ -22,14 +26,11 @@ const Hero = () => {
             I design beautiful simple
             <br />
             passionate about programming <br />
-            and love what i do.{" "}
+            and love what I do.
           </motion.span>
         </div>
 
-        <motion.div
-          variants={fadeIn("up", "tween", 0.3, 1)}
-          className={css.img}
-        >
+        <motion.div variants={fadeIn("up", "tween", 0.3, 1)} className={css.img}>
           <motion.img variants={slideIn("up", "tween", 0.5, 1.3)} src="./person.png" alt="" />
         </motion.div>
 
@@ -38,7 +39,7 @@ const Hero = () => {
         </a>
 
         <div className={css.lowerElements}>
-          <motion.div variants={fadeIn("right", "tween", 0.3, 1)} className={css.experience}>
+          <motion.div className={`experience ${css.experience}`} variants={fadeIn("right", "tween", 0.3, 1)}>
             <div className="primaryText">7</div>
             <div className="secondaryText">
               <div>Months</div>
@@ -46,15 +47,13 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          <motion.div variants={fadeIn("left", "tween", 0.5, 1)} className={css.certificate}>
+          <motion.div className={`certificate ${css.certificate}`} variants={fadeIn("left", "tween", 0.5, 1)}>
             <a href="https://wong-certificate.netlify.app/">
               <img src="https://curso.academlo.com/wp-content/uploads/2020/02/logo_academlo.png" alt="" />
             </a>
             <span>CERTIFIED WITH ACADEMLO</span>
             <span>FULL STACK DEVELOPER</span>
           </motion.div>
-
-
         </div>
       </motion.div>
     </section>

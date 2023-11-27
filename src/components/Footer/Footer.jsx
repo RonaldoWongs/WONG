@@ -3,18 +3,21 @@ import { footerVariants, staggerChildren } from "../../utils/motion";
 import css from "./Footer.module.scss";
 import { motion } from "framer-motion";
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
+  const containerClasses = `${css.container} ${darkMode ? css.dark : ''}`;
+  const wrapperClasses = `${css.wrapper} ${darkMode ? css.dark : ''}`;
+
   return (
     <motion.section
       variants={staggerChildren}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`paddings ${css.wrapper}`}
+      className={`paddings ${wrapperClasses}`}
     >
       <motion.div
         variants={footerVariants}
-        className={`innerWidth yPaddings flexCenter ${css.container}`}
+        className={`innerWidth yPaddings flexCenter ${containerClasses}`}
       >
         <div className={css.left}>
           <span className="primaryText">

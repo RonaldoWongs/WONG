@@ -4,7 +4,10 @@ import css from "./Portfolio.module.scss";
 import { fadeIn, staggerChildren, textVariant, textVariant2 } from "../../utils/motion";
 import { redirectToPage1, redirectToPage2, redirectToPage3 } from "../../hooks/redirects"; // Importa las funciones de redirección
 
-const Portfolio = () => {
+const Portfolio = ({ darkMode }) => {
+  const containerClasses = `${css.container} ${darkMode ? css.dark : ''}`;
+  const wrapperClasses = `${css.wrapper} ${darkMode ? css.dark : ''}`;
+
   useEffect(() => {
     // Agregar eventos de clic a las imágenes aquí
     const image1 = document.getElementById("image1");
@@ -43,10 +46,10 @@ const Portfolio = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`paddings ${css.wrapper}`}
+      className={`paddings ${wrapperClasses}`}
     >
       <a className="anchor" id="portfolio"></a>
-      <div className={`innerWidth flexCenter ${css.container}`}>
+      <div className={`innerWidth flexCenter ${containerClasses}`}>
         <motion.div variants={textVariant(0.4)} className={`flexCenter ${css.heading}`}>
           <div>
             <span className="primaryText">My Latest Works</span>

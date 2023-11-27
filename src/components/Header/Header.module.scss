@@ -9,6 +9,11 @@
     top: 0rem;
     transition: all 300ms ease;
 
+    &.dark {
+      background-color: rgb(57, 30, 65); /* Establece el fondo en negro para el modo oscuro */
+      color: rgb(255, 255, 255); /* Cambia el color del texto a blanco en modo oscuro */
+    }
+
     
   
     .container {
@@ -37,7 +42,8 @@
           top: 4.2rem;
           width: 50%;
           min-width: 15rem;
-          background: rgb(255, 255, 254);
+          background:rgb(186, 94, 157);
+          backdrop-filter: blur(50px);
           padding: 2rem;
           display: flex;
           border-radius: 10px;
@@ -45,7 +51,13 @@
           align-items: flex-start;
           padding: 3rem;
           justify-content: flex-start;
-          box-shadow: 0px 4px 4px rgba(3, 1, 3, 0.30);
+          box-shadow: 0px 4px 4px rgba(3, 1, 3, 0.50);
+
+          &.dark {
+            background-color: black; /* Establece el fondo en negro para el modo oscuro */
+            color: white; /* Cambia el color del texto a blanco en modo oscuro */
+          }
+          
         }
   
         text-transform: uppercase;
@@ -80,6 +92,8 @@
           }
         }
       }
+
+      
   
       .menuIcon {
         @media (max-width: $sm), (max-width: $md) {
@@ -90,15 +104,15 @@
       }
       
       /* Estilos para el botón de redes sociales */
-      .socialButton {
-        cursor: pointer;
-        margin-left: 14rem; /* Ajusta el margen izquierdo según tus necesidades */
-        display: flex;       
+      .darkModeButton {
+        margin-left: 0px; /* Ajusta el margen derecho según tus preferencias */
       }
+      
       
       .socialIcon {
         font-size: 24px;
         color: $primary; /* Ajusta el color según tus preferencias */
+
       }
       
       /* Estilos para el menú de redes sociales */
