@@ -40,16 +40,17 @@ const Hero = ({ darkMode }) => {
 
         <div className={css.lowerElements}>
           <motion.div className={`experience ${css.experience}`} variants={fadeIn("right", "tween", 0.3, 1)}>
-            <div className="primaryText">7</div>
+            <div className="primaryText">2</div>
             <div className="secondaryText">
-              <div>Months</div>
-              <div>Experience</div>
+              <div>Years of</div>
+              <div>Experience on personal
+                 proyecs</div>
             </div>
           </motion.div>
 
-          <motion.div className={`certificate ${css.certificate}`} variants={fadeIn("left", "tween", 0.5, 1)}>
+          <motion.div className={`certificate ${css.certificate}`} variants={fadeIn("left", "tween", 0.6, 1)}>
             <a href="https://wong-certificate.netlify.app/">
-              <img src="https://curso.academlo.com/wp-content/uploads/2020/02/logo_academlo.png" alt="" />
+              <img src="https://yt3.googleusercontent.com/q94w3Q5SfG88JmDCk7_kthffYAObrS5QweQXp_KBNkVfUHDUOIwtLpcEaS8MP89aBgJFfWXxdw=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-r" alt="" />
             </a>
             <span>CERTIFIED WITH ACADEMLO</span>
             <span>FULL STACK DEVELOPER</span>
